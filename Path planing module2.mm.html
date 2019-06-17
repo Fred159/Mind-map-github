@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Path planing module</title>
+<style type="text/css">
+    li { list-style: none;  margin: 0; }
+    p { margin: 0; }
+
+    span.l { color: red; font-weight: bold; }
+
+    a.mapnode:link {text-decoration: none; color: black; }
+    a.mapnode:visited {text-decoration: none; color: black; }
+    a.mapnode:active {text-decoration: none; color: black; }
+    a.mapnode:hover {text-decoration: none; color: black; background: #eeeee0; }
+
+</style>
+<!-- ^ Position is not set to relative / absolute here because of Mozilla -->
+</head>
+<body>
+<p><span style="font-size: 133%;font-family: SansSerif, sans-serif; font-weight: bold; ">Path planing module</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Generate a drivarable trajectory</span>
+
+</li>
+<li><span style="color: #0000ff;font-size: 108%;font-family: SansSerif, sans-serif; font-weight: bold; ">Search</span>
+<ul><li>How to get a smallest cost trajectory
+
+</li>
+<li>A* algorithm
+<ul><li>Find a path with minimal cost with heuristic function(distance based)
+
+</li>
+<li>Completeness
+<ul><li>If path exist , it always find it
+
+</li>
+
+</ul>
+</li>
+<li>Optimality
+<ul><li>Find a minimal cost path
+
+</li>
+
+</ul>
+</li>
+<li>Discrete
+
+</li>
+<li>Solution it finds are not always drivarable
+
+</li>
+
+</ul>
+</li>
+<li>And other discrete methods and probabilistic methods
+
+</li>
+
+</ul>
+</li>
+<li><span style="color: #ff0033;font-size: 108%;font-family: SansSerif, sans-serif; font-weight: bold; ">Prediction</span>
+<ul><li>Surrounding items always moving
+
+</li>
+<li>Model based
+<ul><li>Process models
+<ul><li>Using dynamic model to prediction
+<ul><li>Steer to right? Higher probability to turn right
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>Multi-modal estimator
+<ul><li>Compare k-1 and k S state(in Frenet)
+<ul><li>Prob: if(S bigger at k)(Lane change)else(go straight)
+
+</li>
+<li>How? Simply use Naive bayesian
+<ul><li>Logging data 
+
+</li>
+<li>Compute mean and covaraince of DB
+
+</li>
+<li>Using bayesian compute probability
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>c++ Coding
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>Data driven approach
+<ul><li>Trajectory clustering
+<ul><li>Offline:Logging vehicles behavior and learn
+
+</li>
+<li>Online:Based on learned information, make decision
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="color: #000000;font-size: 108%;font-family: SansSerif, sans-serif; font-weight: bold; ">Behavior planning</span>
+<ul><li>Define the behavior of each state
+
+</li>
+<li>Finite state machine
+<ul><li>Define the each state's flow
+<ul><li>Keep lane
+
+</li>
+<li>Change lane
+
+</li>
+<li>Follow front vehicle
+
+</li>
+<li>Slow down
+
+</li>
+<li>etc.
+
+</li>
+
+</ul>
+</li>
+<li>Define states flow rules
+<ul><li>Cost based
+<ul><li>Speed cost
+<ul><li>if(speed&gt;max)(cost =1),else(cost = 0)
+
+</li>
+
+</ul>
+</li>
+<li>Lane change cost
+<ul><li>(Lane number -target lane number)^2
+
+</li>
+
+</ul>
+</li>
+<li>Ratio of deltaD/deltaS in frenet
+
+</li>
+
+</ul>
+</li>
+<li>Choose a state from candidate state
+<ul><li>Evaluate each states' cost
+
+</li>
+<li>Pick minimal one
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>c++ Coding
+
+</li>
+
+</ul>
+</li>
+<li>Behavior update time is longest
+
+</li>
+
+</ul>
+</li>
+<li><span style="color: #009933;font-size: 108%;font-family: SansSerif, sans-serif; font-weight: bold; ">Trajectory Generation</span>
+<ul><li>Behavior generated, then appropriate trajectory should be generated
+
+</li>
+<li>A* based motion planning 
+<ul><li>Discrete and not drivarable trajectory
+
+</li>
+
+</ul>
+</li>
+<li>Hybrid A*
+<ul><li>Combine with bicycle model to generate a drivarable trajectory
+
+</li>
+<li>Not always find a solution
+
+</li>
+<li>Solution it finds are not always optimal
+
+</li>
+
+</ul>
+</li>
+<li>Trajectory constraint
+<ul><li>Coordinate
+<ul><li>Frenet
+
+</li>
+
+</ul>
+</li>
+<li>Trajectory selection
+<ul><li>Consider the prediction module results
+
+</li>
+<li>Jerk minimizing
+<ul><li>Quintic polynomial trajectory generation
+
+</li>
+<li>Acceleration
+<ul><li>Longitudinal
+
+</li>
+<li>Lateral
+
+</li>
+
+</ul>
+</li>
+<li>Centripital force
+<ul><li>Calculated with steering angle
+
+</li>
+
+</ul>
+</li>
+<li>Time limit
+
+</li>
+
+</ul>
+</li>
+<li>Distance to obstracle
+
+</li>
+<li>Time to goal
+
+</li>
+<li>All the constraints seleted by cost
+<ul><li>Hard to balance each cost
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>c++ Coding
+
+</li>
+
+</ul>
+</li>
+<li>Recent research
+<ul><li>No map based path planning
+
+</li>
+<li>Motion planning at intersection
+
+</li>
+<li>Reinfrocement based Deeptraffic
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul></body>
+</html>

@@ -1,0 +1,16 @@
+<map version="0.9.0">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1511156839349" ID="ID_1456034370" MODIFIED="1511156851244" TEXT="Advanced computer vision">
+<node CREATED="1511156854550" ID="ID_139020211" MODIFIED="1511156857515" POSITION="right" TEXT="functions"/>
+<node CREATED="1511156864206" ID="ID_1196393742" MODIFIED="1511156872130" POSITION="left" TEXT="image format">
+<node CREATED="1511156873374" ID="ID_23499540" MODIFIED="1511156886815" TEXT="mpimg.imread">
+<node CREATED="1511156886816" ID="ID_1931734741" MODIFIED="1511156890404" TEXT="read RGB"/>
+</node>
+<node CREATED="1511156896718" ID="ID_375661058" MODIFIED="1511156924339" TEXT="cv2.imread&amp;glob.glob">
+<node CREATED="1511156901694" ID="ID_750810078" MODIFIED="1511156904299" TEXT="read BGR">
+<node CREATED="1511156929997" ID="ID_1752034944" MODIFIED="1511156950922" TEXT="can be change to RGB by using cv2.cvtCOLOR_BGR2RGB"/>
+</node>
+</node>
+</node>
+</node>
+</map>

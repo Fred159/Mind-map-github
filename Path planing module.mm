@@ -1,0 +1,158 @@
+<map version="0.9.0">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1558010973791" ID="ID_508713191" MODIFIED="1558056746758" TEXT="Path planing module">
+<font BOLD="true" NAME="SansSerif" SIZE="16"/>
+<node CREATED="1558011078643" ID="ID_876800508" MODIFIED="1558056687440" POSITION="right" TEXT="Generate a drivarable trajectory">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1558011020475" ID="ID_439635276" MODIFIED="1558056722772" POSITION="right" TEXT="Search">
+<font BOLD="true" NAME="SansSerif" SIZE="13"/>
+<node CREATED="1558011050618" ID="ID_166866872" MODIFIED="1558011298678" TEXT="How to get a smallest cost trajectory">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1558011428784" ID="ID_1341266495" MODIFIED="1558011458820" TEXT="A* algorithm">
+<node CREATED="1558011534784" ID="ID_740990816" MODIFIED="1558011581005" TEXT="Find a path with minimal cost with heuristic function(distance based)">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1558011439520" ID="ID_914875944" MODIFIED="1558011823007" TEXT="Completeness">
+<icon BUILTIN="ksmiletris"/>
+<node CREATED="1558011510407" ID="ID_1696016283" MODIFIED="1558011590556" TEXT="If path exist , it always find it"/>
+</node>
+<node CREATED="1558011476943" ID="ID_460289170" MODIFIED="1558011745807" TEXT="Optimality">
+<icon BUILTIN="ksmiletris"/>
+<node CREATED="1558011497095" ID="ID_1850061447" MODIFIED="1558011594012" TEXT="Find a minimal cost path"/>
+</node>
+<node CREATED="1558011732871" ID="ID_1541646039" MODIFIED="1558012148424" TEXT="Discrete">
+<icon BUILTIN="clanbomber"/>
+</node>
+<node CREATED="1558011760630" ID="ID_1543240279" MODIFIED="1558012151344" TEXT="Solution it finds are not always drivarable">
+<icon BUILTIN="clanbomber"/>
+</node>
+</node>
+<node CREATED="1558011689614" ID="ID_7186549" MODIFIED="1558011716211" TEXT="And other discrete methods and probabilistic methods"/>
+</node>
+<node CREATED="1558011034555" ID="ID_459195159" MODIFIED="1558056724180" POSITION="right" TEXT="Prediction">
+<font BOLD="true" NAME="SansSerif" SIZE="13"/>
+<node CREATED="1558014742867" ID="ID_642099519" MODIFIED="1558016392452" TEXT="Surrounding items always moving">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1558014759672" ID="ID_934609525" MODIFIED="1558014776046" TEXT="Model based">
+<node CREATED="1558014817488" ID="ID_273207568" MODIFIED="1558014820630" TEXT="Process models">
+<node CREATED="1558015503292" ID="ID_225761635" MODIFIED="1558015534400" TEXT="Using dynamic model to prediction">
+<node CREATED="1558015556987" ID="ID_1823999564" MODIFIED="1558015601019" TEXT="Steer to right? Higher probability to turn right"/>
+</node>
+</node>
+<node CREATED="1558014820968" ID="ID_1916089978" MODIFIED="1558014830974" TEXT="Multi-modal estimator">
+<node CREATED="1558015675690" ID="ID_1865337365" MODIFIED="1558015843607" TEXT="Compare k-1 and k S state(in Frenet)">
+<node CREATED="1558015693445" ID="ID_1586062785" MODIFIED="1558015935114" TEXT="Prob: if(S bigger at k)(Lane change)else(go straight)"/>
+<node CREATED="1558016136439" ID="ID_1948674873" MODIFIED="1558016329043" TEXT="How? Simply use Naive bayesian">
+<node CREATED="1558016152519" ID="ID_1621701948" MODIFIED="1558016351187" TEXT="Logging data "/>
+<node CREATED="1558016351597" ID="ID_13333276" MODIFIED="1558016354611" TEXT="Compute mean and covaraince of DB"/>
+<node CREATED="1558016376429" ID="ID_1203817754" MODIFIED="1558016382395" TEXT="Using bayesian compute probability"/>
+</node>
+</node>
+<node CREATED="1558056313132" HGAP="46" ID="ID_1974921354" MODIFIED="1558056438359" TEXT="c++ Coding" VSHIFT="-14">
+<icon BUILTIN="yes"/>
+</node>
+</node>
+</node>
+<node CREATED="1558014776344" ID="ID_347193855" MODIFIED="1558014789326" TEXT="Data driven approach">
+<node CREATED="1558014806168" ID="ID_471166440" MODIFIED="1558014816032" TEXT="Trajectory clustering">
+<node CREATED="1558015351500" ID="ID_284427285" MODIFIED="1558015410841" TEXT="Offline:Logging vehicles behavior and learn"/>
+<node CREATED="1558015411652" ID="ID_981313698" MODIFIED="1558015437418" TEXT="Online:Based on learned information, make decision"/>
+</node>
+</node>
+</node>
+<node CREATED="1558011120746" ID="ID_436189887" MODIFIED="1558056725543" POSITION="right" TEXT="Behavior planning">
+<font BOLD="true" NAME="SansSerif" SIZE="13"/>
+<node CREATED="1558013113124" ID="ID_334156459" MODIFIED="1558013130970" TEXT="Define the behavior of each state">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1558013136595" ID="ID_648759711" MODIFIED="1558013275214" TEXT="Finite state machine">
+<node CREATED="1558013167236" ID="ID_1889752787" MODIFIED="1558013187697" TEXT="Define the each state&apos;s flow">
+<node CREATED="1558013189323" ID="ID_539907579" MODIFIED="1558013195476" TEXT="Keep lane"/>
+<node CREATED="1558013198996" ID="ID_1838175497" MODIFIED="1558013203816" TEXT="Change lane"/>
+<node CREATED="1558013204795" ID="ID_275430730" MODIFIED="1558013217769" TEXT="Follow front vehicle"/>
+<node CREATED="1558013195980" ID="ID_612275210" MODIFIED="1558013198561" TEXT="Slow down"/>
+<node CREATED="1558013221131" ID="ID_574742198" MODIFIED="1558016104621" TEXT="etc."/>
+</node>
+<node CREATED="1558013276339" ID="ID_1360974902" MODIFIED="1558014437513" TEXT="Define states flow rules">
+<node CREATED="1558013300235" ID="ID_864076140" MODIFIED="1558013417648" TEXT="Cost based">
+<node CREATED="1558013304701" ID="ID_1164248899" MODIFIED="1558013313512" TEXT="Speed cost">
+<node CREATED="1558013536305" ID="ID_1062250423" MODIFIED="1558013577222" TEXT="if(speed&gt;max)(cost =1),else(cost = 0)"/>
+</node>
+<node CREATED="1558013313834" ID="ID_44812537" MODIFIED="1558013318248" TEXT="Lane change cost">
+<node CREATED="1558013615377" ID="ID_327705488" MODIFIED="1558013662245" TEXT="(Lane number -target lane number)^2"/>
+</node>
+<node CREATED="1558013419777" ID="ID_1653451996" MODIFIED="1558013436369" TEXT="Ratio of deltaD/deltaS in frenet"/>
+</node>
+<node CREATED="1558014454883" ID="ID_290672296" MODIFIED="1558014507169" TEXT="Choose a state from candidate state">
+<node CREATED="1558014520138" ID="ID_1881788202" MODIFIED="1558014533783" TEXT="Evaluate each states&apos; cost"/>
+<node CREATED="1558014534186" ID="ID_345439436" MODIFIED="1558014550500" TEXT="Pick minimal one"/>
+</node>
+</node>
+<node CREATED="1558056313132" HGAP="46" ID="ID_82938777" MODIFIED="1558056423833" TEXT="c++ Coding" VSHIFT="-14">
+<icon BUILTIN="yes"/>
+</node>
+</node>
+<node CREATED="1558013738080" ID="ID_1383996982" MODIFIED="1558013765213" TEXT="Behavior update time is longest"/>
+</node>
+<node CREATED="1558011133778" ID="ID_100191051" MODIFIED="1558056749269" POSITION="right" TEXT="Trajectory Generation">
+<font BOLD="true" NAME="SansSerif" SIZE="13"/>
+<node CREATED="1558011166330" ID="ID_538861945" MODIFIED="1558011209948" TEXT="Behavior generated, then appropriate trajectory should be generated">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1558011196201" ID="ID_476401064" MODIFIED="1558011403166" TEXT="A* based motion planning ">
+<node CREATED="1558011830057" ID="ID_562315483" MODIFIED="1558012145368" TEXT="Discrete and not drivarable trajectory"/>
+</node>
+<node CREATED="1558011844421" ID="ID_1010483610" MODIFIED="1558011848298" TEXT="Hybrid A*">
+<node CREATED="1558011849477" ID="ID_332787306" MODIFIED="1558012339598" TEXT="Combine with bicycle model to generate a drivarable trajectory">
+<icon BUILTIN="ksmiletris"/>
+</node>
+<node CREATED="1558012235051" ID="ID_453740457" MODIFIED="1558012336968" TEXT="Not always find a solution">
+<icon BUILTIN="clanbomber"/>
+</node>
+<node CREATED="1558012321290" ID="ID_1846685291" MODIFIED="1558012336968" TEXT="Solution it finds are not always optimal">
+<icon BUILTIN="clanbomber"/>
+</node>
+</node>
+<node CREATED="1558012387465" ID="ID_91460673" MODIFIED="1558013005846" TEXT="Trajectory constraint">
+<node CREATED="1558012408553" ID="ID_220354981" MODIFIED="1558012419564" TEXT="Coordinate">
+<node CREATED="1558012419565" ID="ID_1343432645" MODIFIED="1558012421318" TEXT="Frenet"/>
+</node>
+<node CREATED="1558012422457" ID="ID_364823908" MODIFIED="1558012456194" TEXT="Trajectory selection">
+<node CREATED="1558014670409" ID="ID_1480348699" MODIFIED="1558014696112" TEXT="Consider the prediction module results"/>
+<node CREATED="1558012632471" ID="ID_1142220402" MODIFIED="1558012826239" TEXT="Jerk minimizing">
+<node CREATED="1558012654673" ID="ID_1700878880" MODIFIED="1558012900425" TEXT="Quintic polynomial trajectory generation">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1558012728096" ID="ID_1030381943" MODIFIED="1558012903506" TEXT="Acceleration">
+<node CREATED="1558012784752" ID="ID_82284497" MODIFIED="1558012794461" TEXT="Longitudinal"/>
+<node CREATED="1558012788494" ID="ID_486489967" MODIFIED="1558012791491" TEXT="Lateral"/>
+</node>
+<node CREATED="1558012753206" ID="ID_169215218" MODIFIED="1558012763572" TEXT="Centripital force">
+<node CREATED="1558012834414" ID="ID_638067587" MODIFIED="1558012848719" TEXT="Calculated with steering angle"/>
+</node>
+<node CREATED="1558012628063" ID="ID_1439971261" MODIFIED="1558012639357" TEXT="Time limit"/>
+</node>
+<node CREATED="1558012682039" ID="ID_1347600046" MODIFIED="1558012970810" TEXT="Distance to obstracle"/>
+<node CREATED="1558012971301" ID="ID_1907761330" MODIFIED="1558012974698" TEXT="Time to goal"/>
+<node CREATED="1558012764383" ID="ID_1670397624" MODIFIED="1558012921626" TEXT="All the constraints seleted by cost">
+<node CREATED="1558012922325" ID="ID_1560951646" MODIFIED="1558012994369" TEXT="Hard to balance each cost">
+<icon BUILTIN="info"/>
+</node>
+</node>
+</node>
+<node CREATED="1558056313132" HGAP="46" ID="ID_128578714" MODIFIED="1558056483465" TEXT="c++ Coding" VSHIFT="-14">
+<icon BUILTIN="yes"/>
+</node>
+</node>
+<node CREATED="1558013008517" ID="ID_1996401412" MODIFIED="1558013014418" TEXT="Recent research">
+<node CREATED="1558013015420" ID="ID_956580098" MODIFIED="1558013029474" TEXT="No map based path planning"/>
+<node CREATED="1558013030508" ID="ID_1624830554" MODIFIED="1558013043906" TEXT="Motion planning at intersection"/>
+<node CREATED="1558013044293" HGAP="19" ID="ID_1047024367" MODIFIED="1558013067025" TEXT="Reinfrocement based Deeptraffic"/>
+</node>
+</node>
+</node>
+</map>

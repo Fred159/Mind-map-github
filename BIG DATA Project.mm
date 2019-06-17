@@ -1,0 +1,11 @@
+<map version="0.9.0">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1512608888715" ID="ID_1088945405" MODIFIED="1512608933589" TEXT="BIG DATA Project">
+<node CREATED="1512608934929" ID="ID_981361577" MODIFIED="1512609048317" POSITION="right" TEXT="1. Question define"/>
+<node CREATED="1512608979696" ID="ID_606085806" MODIFIED="1512609069380" POSITION="right" TEXT="2. Data source"/>
+<node CREATED="1512609070135" ID="ID_406002650" MODIFIED="1512609084013" POSITION="right" TEXT="3. Data analyze"/>
+<node CREATED="1512609084823" ID="ID_1616992761" MODIFIED="1512609092004" POSITION="right" TEXT="4. Data pre-process"/>
+<node CREATED="1512609092519" ID="ID_1002494008" MODIFIED="1512609114327" POSITION="right" TEXT="5. Rapidminer block construction"/>
+<node CREATED="1512609060503" ID="ID_1705657589" MODIFIED="1512609127116" POSITION="right" TEXT="6. Result analyze"/>
+</node>
+</map>

@@ -1,0 +1,48 @@
+<map version="0.9.0">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1558355648463" ID="ID_203284289" MODIFIED="1558356551840" TEXT="Ego Vehicle Path Planning">
+<node CREATED="1558355658640" ID="ID_798627193" MODIFIED="1558355673813" POSITION="right" TEXT="Path generation">
+<node CREATED="1558355676112" ID="ID_1093143643" MODIFIED="1558356397493" TEXT="Smooth">
+<node CREATED="1558355681683" ID="ID_165979578" MODIFIED="1558355715501" TEXT="Inherit some of the waypoint from previous path"/>
+<node CREATED="1558356433931" ID="ID_242464614" MODIFIED="1558356452641" TEXT="Select far waypoints for generating spline function"/>
+</node>
+<node CREATED="1558356265236" ID="ID_711814317" MODIFIED="1558356334675" TEXT="Jerk contraint">
+<node CREATED="1558356274148" ID="ID_671278730" MODIFIED="1558356330721" TEXT="Non of the closest waypoint&apos;s acceleration value &gt;10m/^2"/>
+</node>
+<node CREATED="1558356335612" ID="ID_1130293790" MODIFIED="1558356343553" TEXT="Velocity constraint">
+<node CREATED="1558356344300" ID="ID_410487223" MODIFIED="1558356359857" TEXT="Vehicle velocity should not above 50MPH"/>
+</node>
+<node CREATED="1558356364244" ID="ID_316595353" MODIFIED="1558356372848" TEXT="Generate 50 waypoints in 0.02s"/>
+</node>
+<node CREATED="1558355727368" ID="ID_263790359" MODIFIED="1558355780393" POSITION="right" TEXT="Path safety evaluation">
+<node CREATED="1558355747120" ID="ID_309832260" MODIFIED="1558355928748" TEXT="ROI">
+<node CREATED="1558355935518" ID="ID_971676166" MODIFIED="1558356035491" TEXT="If surround vehicle in ROI : 28meter"/>
+</node>
+<node CREATED="1558355929111" ID="ID_405217156" MODIFIED="1558355989092" TEXT="ROI Offset">
+<node CREATED="1558355969654" ID="ID_1641059355" MODIFIED="1558356039315" TEXT="Back vehicle :15meter"/>
+<node CREATED="1558355993599" ID="ID_374858259" MODIFIED="1558356042179" TEXT="Ahead vehicle : 0 meter"/>
+</node>
+<node CREATED="1558356045238" ID="ID_1472478355" MODIFIED="1558356063475" TEXT="Offset setting make vehicle changes lane more aggresively"/>
+</node>
+<node CREATED="1558355830263" ID="ID_1386272617" MODIFIED="1558355857196" POSITION="right" TEXT="Behavior(Decision making)">
+<node CREATED="1558356068758" ID="ID_1047104977" MODIFIED="1558356086593" TEXT="Change lane">
+<node CREATED="1558356086595" ID="ID_1194697633" MODIFIED="1558356088891" TEXT="Left">
+<node CREATED="1558356181117" ID="ID_457869296" MODIFIED="1558356236483" TEXT="If ROI safe in left lane &amp;&amp; ego vehicle not in left lane"/>
+</node>
+<node CREATED="1558356089101" ID="ID_1446443893" MODIFIED="1558356093354" TEXT="Right">
+<node CREATED="1558356241069" ID="ID_1262481934" MODIFIED="1558356255810" TEXT="If ROI safe in right lane &amp;&amp; ego vehicle not in right lane"/>
+</node>
+</node>
+<node CREATED="1558356094277" ID="ID_168632922" MODIFIED="1558356098411" TEXT="Hold current lane">
+<node CREATED="1558356099062" ID="ID_1860192065" MODIFIED="1558356177745" TEXT="In ROI range, there are other vehicles &#xa;and there is a vehicle ahead"/>
+</node>
+</node>
+<node CREATED="1558356495898" ID="ID_210130860" MODIFIED="1558356516721" POSITION="right" TEXT="Prediction surrounded vehicles position">
+<node CREATED="1558356517427" ID="ID_1599275637" MODIFIED="1558356541864" TEXT="Using s and magnitude of surround vehicles"/>
+</node>
+<node CREATED="1558355862719" ID="ID_59236126" MODIFIED="1558355871100" POSITION="left" TEXT="Frenet coordinate"/>
+<node CREATED="1558355871695" ID="ID_437759200" MODIFIED="1558355888740" POSITION="left" TEXT="Rotation and translation"/>
+<node CREATED="1558355889599" ID="ID_1934720240" MODIFIED="1558355909524" POSITION="left" TEXT="Frenet and global coordinate transform"/>
+<node CREATED="1558355910279" ID="ID_1344131606" MODIFIED="1558355914507" POSITION="left" TEXT="Spline fitting"/>
+</node>
+</map>
